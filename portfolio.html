@@ -54,7 +54,7 @@
                 href="mailto:info@devstudio.com"
                 target="_blank"
               >
-                <svg class="header__icon" width="16" height="12">
+                <svg class="header__icon" width="14" height="10">
                   <use href="./img/icons.svg#letter"></use>
                 </svg>
                 info@devstudio.com</a
@@ -66,16 +66,18 @@
                 href="tel:+380961111111"
                 target="_blank"
               >
-                <svg class="header__icon" width="10" height="16">
+                <svg class="header__icon" width="10" height="14">
                   <use href="./img/icons.svg#smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
               >
             </li>
           </ul>
-          <svg class="header__menu" width="40" height="40">
-            <use href="./img/icons.svg#menu"></use>
-          </svg>
+          <button data-menu-open class="header__menu">
+            <svg class="header__svg" width="40" height="40">
+              <use href="./img/icons.svg#menu"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -454,16 +456,88 @@
         </div>
       </div>
     </footer>
-    <div class="scroll container">
-      <a class="scroll__link" href="#scroll-to-top">
-        <svg class="scroll__icon" width="29" height="22">
-          <use href="./img/icons.svg#top-arrow"></use>
-        </svg>
-      </a>
+    <div data-menu class="backdrop__mobile is-hidden">
+      <div class="menu">
+        <ul class="menu__nav">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__link">Студія</a>
+          </li>
+          <li class="menu__item">
+            <a href="./portfolio.html" class="menu__link menu__link--checked"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#contacts" class="menu__link">Контакти</a>
+          </li>
+        </ul>
+        <div class="menu__container">
+          <ul class="menu__contacts">
+            <li class="menu__contact">
+              <a href="tel:+380961111111" class="menu__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu__contact">
+              <a href="mailto:info@devstudio.com" class="menu__address"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu__socials">
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/"
+                class="menu__run"
+                >Instagram</a
+              >
+              <div class="menu__line"></div>
+            </li>
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://twitter.com/?lang=uk"
+                class="menu__run"
+                >Twitter</a
+              >
+              <div class="menu__line"></div>
+            </li>
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/?locale=uk_UA"
+                class="menu__run"
+                >Facebook</a
+              >
+              <div class="menu__line"></div>
+            </li>
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://ua.linkedin.com/"
+                class="menu__run"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+          <button data-menu-close class="menu__btn">
+            <svg class="menu__svg" width="40" height="40">
+              <use href="./img/icons.svg#big-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
+    <a class="scroll__link" href="#scroll-to-top">
+      <svg class="scroll__icon" width="29" height="22">
+        <use href="./img/icons.svg#top-arrow"></use>
+      </svg>
+    </a>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

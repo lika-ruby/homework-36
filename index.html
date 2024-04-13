@@ -75,9 +75,11 @@
               >
             </li>
           </ul>
-          <svg class="header__menu" width="40" height="40">
-            <use href="./img/icons.svg#menu"></use>
-          </svg>
+          <button data-menu-open class="header__menu">
+            <svg class="header__svg" width="40" height="40">
+              <use href="./img/icons.svg#menu"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -647,6 +649,79 @@
         </form>
       </div>
     </div>
+    <div data-menu class="backdrop__mobile is-hidden">
+      <div class="menu">
+        <ul class="menu__nav">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__link menu__link--checked"
+              >Студія</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="./portfolio.html" class="menu__link">Портфоліо</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contacts" class="menu__link">Контакти</a>
+          </li>
+        </ul>
+        <div class="menu__container">
+          <ul class="menu__contacts">
+            <li class="menu__contact">
+              <a href="tel:+380961111111" class="menu__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu__contact">
+              <a href="mailto:info@devstudio.com" class="menu__address"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu__socials">
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/"
+                class="menu__run"
+                >Instagram</a
+              >
+              <div class="menu__line"></div>
+            </li>
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://twitter.com/?lang=uk"
+                class="menu__run"
+                >Twitter</a
+              >
+              <div class="menu__line"></div>
+            </li>
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/?locale=uk_UA"
+                class="menu__run"
+                >Facebook</a
+              >
+              <div class="menu__line"></div>
+            </li>
+            <li class="menu__social">
+              <a
+                target="_blank"
+                href="https://ua.linkedin.com/"
+                class="menu__run"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+          <button data-menu-close class="menu__btn">
+            <svg class="menu__svg" width="40" height="40">
+              <use href="./img/icons.svg#big-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- Scroll to top -->
     <a class="scroll__link" href="#scroll-to-top">
       <svg class="scroll__icon" width="29" height="22">
@@ -658,5 +733,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

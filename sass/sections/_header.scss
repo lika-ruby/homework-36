@@ -155,12 +155,16 @@
     }
 
     &__menu {
-        fill: $title-color;
+        background-color: transparent;
         margin-left: auto;
 
         @media screen and (min-width: 768px) {
             display: none;
         }
+    }
+
+    &__svg {
+        fill: $title-color;
 
         &:hover,
         &:focus {
